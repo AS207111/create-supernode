@@ -1,4 +1,4 @@
-You could find an ansible script in this repo to install a supernode for the freifunk hood BonnV2 from scratch.
+You could find an ansible script in this repo to install a supernode for the freifunk hood as207111 from scratch.
 
 You just need to install a simple debian buster virtual or physical maschine and ansible.
 

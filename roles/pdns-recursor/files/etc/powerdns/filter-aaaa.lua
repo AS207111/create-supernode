@@ -10,7 +10,7 @@
 exclude_domains = {
   --newDN('google.com'),
   --newDN('microsoft.com'),
-  newDN('bn.ffkbu'),
+  newDN('ffas'),
 }
 
 function postresolve(dq)

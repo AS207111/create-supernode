@@ -1,5 +1,5 @@
-option domain-name "bn.ffkbu";
-option domain-search "bn.ffkbu";
+option domain-name "ffas";
+option domain-search "ffas";
 option domain-name-servers {{ network_ipv4 }}.1;
 option ntp-servers {{ network_ipv4 }}.1;
 
@@ -10,7 +10,7 @@ default-lease-time 3600;        #1 Stunde
 max-lease-time 3600;            #1 Stunde
 authoritative;
 
-subnet 10.70.0.0 netmask 255.255.0.0 {
+subnet 10.207.0.0 netmask 255.255.0.0 {
 # speed up ip assignment if gateway is switched
   pool {
     range {{ dhcpd_ipv4_blockstart1 }} {{ dhcpd_ipv4_blockend1 }};    
