@@ -38,14 +38,14 @@
     - 'down.sh'
     - 'check_fastest_server'
 
-- name: Add a cronjob to reconnect to the hopefully fastest VPN server at night
-  cron:
-    name: "reconnect openvpn to (hopefully) connect to the fastest server"
-    minute: 12
-    hour: 3
-    job: "/etc/openvpn/check_fastest_server"
-    state: present
-    user: root
+#- name: Add a cronjob to reconnect to the hopefully fastest VPN server at night
+#  cron:
+#    name: "reconnect openvpn to (hopefully) connect to the fastest server"
+#    minute: 12
+#    hour: 3
+#    job: "/etc/openvpn/check_fastest_server"
+#    state: present
+#    user: root
 
 - name: install netselect for check_fastest_server
   package:
