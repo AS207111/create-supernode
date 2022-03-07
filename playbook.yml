@@ -5,7 +5,7 @@
     servernummer: "1"
     network_ipv4: "10.207.8"
     network_ipv6: "fd01:67c:770:1000::"
-    network_ipv6_public: "2a01:4f8:c17:5519::"
+    network_ipv6_public: "2a0e:b107:1901::"
   roles:
     - role: geerlingguy.ntp
       ntp_enabled: true
