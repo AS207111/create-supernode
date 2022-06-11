@@ -9,6 +9,19 @@ The parameters should be explained or self explaining.
 
 Then you could start the installation with a command like `ansible-playbook  playbook.yml -b --ask-become-pass`
 
+## Copy playbook
+
+Create a new `fastd_privatekey` key:
+
+> Use the private key in your playbook, the public key is for the gluon-site.
+
+```bash
+fastd --generate-key
+```
+
+For `wireguard_privatekey_nodes` and `wireguard_privatekey_azirevpn` you can use the shared secrets.
+
+
 ## Supernodes
 
 | DNS-Name                 | IP-Adresse     | IPv6-Adresse          |
