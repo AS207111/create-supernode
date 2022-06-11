@@ -29,10 +29,16 @@
     group: root
     mode: 0644
 
-#- name: Remove "resolvconf" package
-#  apt:
-#    name: resolvconf
-#    state: absent
+- name: Remove "resolvconf" package
+  apt:
+    name: resolvconf
+    state: absent
+
+- name: Create symbolic link for resolvconf for wireguard
+  file:
+    src: /bin/true
+    dest: /usr/local/bin/resolvconf
+    state: link
 
 - name: configure /etc/network/interfaces
   template:
