@@ -2,9 +2,9 @@
 
 - hosts: all
   vars:
-    servernummer: "1"
-    network_ipv4: "10.207.8"
-    network_ipv6: "fd01:67c:770:1000::"
+    servernummer: "2"
+    network_ipv4: "10.207.16"
+    network_ipv6: "fd01:67c:770:2000::"
     network_ipv6_public: "2a0e:b107:1901:1000::"
   roles:
     - role: geerlingguy.ntp
@@ -26,18 +26,13 @@
     - role: network
     - role: pdns-recursor
     - role: dhcpd
-      dhcpd_ipv4_max: "10.207.15.254"
-      dhcpd_ipv6_max: "fd01:67c:770:1fff:ffff:ffff:ffff"
+      dhcpd_ipv4_max: "10.207.23.254"
+      dhcpd_ipv6_max: "fd01:67c:770:2fff:ffff:ffff:ffff"
       # Which IPV4 Blocks should be ignored?
       dhcpd_ipv4_blockstart1: "10.207.0.0"
-      dhcpd_ipv4_blockend1: "10.207.7.255"
-      dhcpd_ipv4_blockstart2: "10.207.16.0"
+      dhcpd_ipv4_blockend1: "10.207.15.255"
+      dhcpd_ipv4_blockstart2: "10.207.24.0"
       dhcpd_ipv4_blockend2: "10.207.255.255"
 
     - role: fastd
       fastd_privatekey: secret
-
-    - role: openvpn
-      openvpn_clientname: user
-      openvpn_clientpass: pass
-
