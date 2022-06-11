@@ -3,8 +3,8 @@ PrivateKey = {{ wireguard_privatekey_azirevpn }}
 Address = 100.75.13.151/19, 2a0e:1c80:c:4:2000::d98/64
 DNS = 100.75.0.1, 2a0e:1c80:c:4:2000::1
 Table = freifunk
-PostUp = iptables -t nat -A POSTROUTING -o vpn0 -j MASQUERADE; ip6tables -t nat -A POSTROUTING -o vpn0 -j MASQUERADE
-PostDown = iptables -t nat -D POSTROUTING -o vpn0 -j MASQUERADE; ip6tables -t nat -D POSTROUTING -o vpn0 -j MASQUERADE
+PostUp = iptables -t nat -A POSTROUTING -o wg2 -j MASQUERADE; ip6tables -t nat -A POSTROUTING -o wg2 -j MASQUERADE
+PostDown = iptables -t nat -D POSTROUTING -o wg2 -j MASQUERADE; ip6tables -t nat -D POSTROUTING -o wg2 -j MASQUERADE
 
 [Peer]
 PublicKey = RcA42yVW4r0fXZaCYT4yCR7MxbOLZsew/jNU4t88pWA=
