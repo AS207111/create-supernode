@@ -103,7 +103,7 @@
     mode: 0644
 
 - name: Ensure server tokens are off for nginx
-lineinfile:
+  lineinfile:
     path: /etc/nginx/nginx.conf
     line: server_tokens off;
     insertafter: include /etc/nginx/sites-enabled/
